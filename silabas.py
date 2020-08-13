@@ -1,7 +1,7 @@
 import csv
 from tqdm import tqdm
 
-with open('Top80-silabas.csv', newline='') as f:
+with open('Top80-silabas.csv', newline='', encoding='latin-1') as f:
     reader = csv.reader(f)
     silabas = list(reader)
 
@@ -12,7 +12,3 @@ with open('silabario.txt','w') as f:
         f.write(silaba1+"\n")
         for silaba2 in silabas[0]:
             f.write(silaba1+silaba2+"\n")
-            for silaba3 in silabas[0]:
-                f.write(silaba1+silaba2+silaba3+"\n")
-                for silaba4 in silabas[0]:
-                    f.write(silaba1+silaba2+silaba3+silaba4+"\n")
